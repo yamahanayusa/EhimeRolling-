@@ -1,6 +1,6 @@
 yusa
 
-kousyou1
+kousyou2
 
 kouki
 
