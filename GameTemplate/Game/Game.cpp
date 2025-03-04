@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Game.h"
+#include "Title.h"
 
 
 bool Game::Start()
