@@ -5,7 +5,9 @@
 class Game;
 
 
-class Player: public IGameObject
+
+
+class Player : public IGameObject
 {
 public:
 	//プレイヤーのステート
@@ -34,6 +36,8 @@ private:
 	//移動処理
 	void Move();
 
+	
+
 	//ジャンプ処理
 	void PlayerJump();
 
@@ -41,19 +45,19 @@ private:
 	enum EnAnimationClip {
 
 
-
-		enAnimationClip_Num,
+		enAnimationClip_Idle,//待機
+		enAnimationClip_Num,//アニメーション数
 	};
 
-	// 物理パラメータ
-	static constexpr float GRAVITY = 9.8f;   // 重力加速度
-	static constexpr float FRICTION = 0.1f;  // 摩擦係数
 
-	AnimationClip  m_animationClip[enAnimationClip_Num];//アニメーションクリップ
-	
-	Vector3 m_scale =     Vector3::One;//スケール
+
+	AnimationClip  m_animationClips[enAnimationClip_Num];//アニメーションクリップ
+	float Playerposition;  // プレイヤーの位置
+	float velocity;  // プレイヤーの速度
+	ModelRender m_modelRender;//モデルレンダー
+	Vector3 m_scale = Vector3::One;//スケール
 	CharacterController   m_charaCon;//キャラコン
 	Vector3               m_moveSpeed;//スピード
-	Game*                 m_game = nullptr;
+	Game* m_game = nullptr;
 	Vector3               m_position;//ポジション
 };
