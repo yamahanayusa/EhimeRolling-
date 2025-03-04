@@ -30,6 +30,11 @@ public:
 	{
 		m_position = position;
 	}
+	//座標を取得
+	const Vector3& GetPosition() const
+	{
+		return m_position;
+	}
 
 	//プライベート
 private:
