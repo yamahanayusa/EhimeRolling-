@@ -6,6 +6,8 @@
 //ƒNƒ‰ƒXéŒ¾
 class Player;
 
+//2025/03/04
+
 class GameCamera:public IGameObject
 {
 public:
