@@ -5,7 +5,6 @@
 bool Game::Start()
 {
 	m_modelRender.Init("Assets/modelData/unityChan.tkm");
-	//test
 	return true;
 }
 
