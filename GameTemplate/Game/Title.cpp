@@ -5,7 +5,7 @@
 Title::Title()
 {
 	//‰æ‘œ‚ð“Ç‚Ýž‚Þ
-	spriteRender;
+	spriteRender.Init("Assets/sprite/Gamestart.dds",1920.0f,1080.0f);
 }
 
 Title::~Title()
@@ -17,7 +17,9 @@ void Title::Update()
 {
 	if (g_pad[0]->IsTrigger(enButtonA))
 	{
-
+		NewGO<Game>(0, "game");
+		DeleteGO(this);
+		DeleteGO(m_game);
 	}
 }
 

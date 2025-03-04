@@ -1,6 +1,6 @@
 #pragma once
 class Game;
-class Title
+class Title:public IGameObject
 {
 public:
 	Title();
