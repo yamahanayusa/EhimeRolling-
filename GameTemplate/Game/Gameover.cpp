@@ -16,14 +16,22 @@ Gameover::~Gameover()
 bool Gameover::Start()
 {
 	//ゲームオーバーの画像を読み込む
-	spriteRender;
+	spriteRender.Init("Assets/sprite/Gameoverdds",1920.0f,1080.0f);
 	m_game = FindGO<Game>("game");
 	return true;
 }
 
 void Gameover::Update()
 {
-
+	//Aボタンが押されたら
+	if (g_pad[0]->IsTrigger(enButtonA))
+	{
+		//タイトルのオブジェクトをつくる
+		NewGO<Title>(0, "title");
+		//自身を削除する
+		DeleteGO(this);
+		DeleteGO(m_game);
+	}
 }
 
 //描画処理
