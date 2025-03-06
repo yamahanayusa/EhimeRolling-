@@ -3,7 +3,7 @@
 #include "Game.h"
 #include <cmath>
 
-//2025/03/04
+//2025/03/06更新
 
 Player::Player()
 {
@@ -21,7 +21,7 @@ bool Player::Start()
 	
 
 	//モデルレンダーを初期化
-	m_modelRender.Init("", m_animationClips, enAnimationClip_Num);
+	m_modelRender.Init("Assets/modelData/unityChan.tkm", m_animationClips, enAnimationClip_Num);
 
 	m_modelRender.SetPosition(m_position);
 	m_modelRender.SetScale(m_scale);
@@ -59,7 +59,14 @@ void Player::PlayerJump()
 	//浮いているとき
 	else
 	{
-		m_moveSpeed.y -= 10;
+		//重力　
+		m_moveSpeed.y -= g *deltatime;
 	}
 }
 
+//描画処理。
+void Player::Render(RenderContext& rc)
+{
+	//ユニティちゃんを描画する。
+	m_modelRender.Draw(rc);
+}

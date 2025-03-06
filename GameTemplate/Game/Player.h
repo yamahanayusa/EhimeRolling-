@@ -4,7 +4,7 @@
 //クラス宣言
 class Game;
 
-//2025/03/04
+//2025/03/06更新
 
 
 class Player : public IGameObject
@@ -54,8 +54,8 @@ private:
 		enAnimationClip_Num,//アニメーション数
 	};
 
-
-
+	float deltatime = 0.016f;//デルタタイム
+	const float g = 9.8f;//重力加速度(m/s^2)
 	AnimationClip  m_animationClips[enAnimationClip_Num];//アニメーションクリップ
 	float Playerposition;  // プレイヤーの位置
 	float velocity;  // プレイヤーの速度
