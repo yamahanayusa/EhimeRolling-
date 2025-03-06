@@ -20,10 +20,11 @@ public:
 	void Update();
 	//座標と視点を更新する
 	void UpdatePositionAndTarget();
-	Player* m_player = nullptr;//プレイヤー
+	
 private:
+	Player* m_player = nullptr;//プレイヤー
 	Vector3 m_toCameraPos = Vector3::One;//カメラポス
-	SpringCamera  m_springCamera;
+	SpringCamera  m_springCamera;//ばねカメラ
 
 
 
