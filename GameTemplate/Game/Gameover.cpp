@@ -16,7 +16,7 @@ Gameover::~Gameover()
 bool Gameover::Start()
 {
 	//ゲームオーバーの画像を読み込む
-	spriteRender.Init("Assets/sprite/Gameoverdds",1920.0f,1080.0f);
+	spriteRender.Init("Assets/sprite/Gameover.dds",1920.0f,1080.0f);
 	m_game = FindGO<Game>("game");
 	return true;
 }
