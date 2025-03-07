@@ -30,12 +30,21 @@ public:
 	{
 		m_position = position;
 	}
+	//回転を設定
+	void SetRotation(const Quaternion& rotation)
+	{
+		m_rotation = rotation;
+	}
 	//座標を取得
 	const Vector3& GetPosition() const
 	{
 		return m_position;
 	}
 
+
+
+	Quaternion				m_rotation;//回転処理　
+	Vector3               m_position;//ポジション
 	//プライベート
 private:
 	//移動処理
@@ -64,5 +73,5 @@ private:
 	CharacterController   m_charaCon;//キャラコン
 	Vector3               m_moveSpeed;//スピード
 	Game* m_game = nullptr;
-	Vector3               m_position;//ポジション
+	
 };

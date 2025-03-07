@@ -14,7 +14,7 @@ Stage01::~Stage01()
 bool Stage01::Start()
 {
 	//ƒ‚ƒfƒ‹‚ğ“Ç‚İ‚ŞB
-	m_modelRender.Init("Assets/test/test.tkm");
+	m_modelRender.Init("Assets/Stage01/stage.tkm");
 	//À•W‚ğİ’è‚·‚é
 	m_modelRender.SetPosition(m_position);
 	//‘å‚«‚³‚ğİ’è‚·‚é

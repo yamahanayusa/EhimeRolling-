@@ -25,15 +25,20 @@ public:
 	{
 		m_rotation = rotation;
 	}
-private:
 
-	//回転処理
-	void Rotation();
 
 	ModelRender					m_modelRender;					//モデルレンダー。
 	Vector3						m_position;						//座標。
 	Vector3						m_scale = Vector3::One;			//大きさ。
 	Quaternion					m_rotation;						//回転。
+
+
+private:
+
+	//回転処理
+	void Rotation();
+
+	
 	PhysicsStaticObject			m_physicsStaticObject;
 	Quaternion                  m_moveRotation;
 	
