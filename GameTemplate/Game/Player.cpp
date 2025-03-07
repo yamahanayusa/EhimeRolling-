@@ -18,12 +18,20 @@ Player::~Player()
 bool Player::Start()
 {
 	//アニメーションをロードする
-	
-
+	m_animationClips[enAnimationClip_Idle].Load("Assets/animData/idle.tka");
+	m_animationClips[enAnimationClip_Idle].SetLoopFlag(true);
 	//モデルレンダーを初期化
 	m_modelRender.Init("Assets/modelData/unityChan.tkm", m_animationClips, enAnimationClip_Num);
 
 	m_modelRender.SetPosition(m_position);
+
+	//キャラクターコントローラーを初期化。
+	m_charaCon.Init(
+		20.0f,			//半径。
+		100.0f,			//高さ。
+		m_position		//座標。
+	);
+
 	m_modelRender.SetScale(m_scale);
 
 	m_game = FindGO<Game>("game");
